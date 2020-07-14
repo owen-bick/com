@@ -18,29 +18,12 @@
       <div id="time"></div>
     </main>
     <script>
+var today = new Date();
 
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-}
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  var ms = today.getMilliseconds();
-  // add a zero in front of numbers<10
-  m = checkTime(m);
-  s = checkTime(s);
-  ms = checkTime(ms);
-  document.getElementById('time').innerHTML = h + ":" + m + ":" + s + ":" + ms;
-  t = setTimeout(function() {
-    startTime()
-  }, 500);
-}
-      startTime();</script>
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var dateTime = date+' '+time;</script>
   </body>
 </html>
