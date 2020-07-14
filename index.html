@@ -15,17 +15,72 @@
       <ul>
         <li><a href="/resume.pdf" target="_blank">My Resume</a></li>
       </ul>
-      <div id="time"></div>
+      <div id="day"></div>
+<div id="date"></div>		
+<div id="clock"></div>
     </main>
     <script>
-var today = new Date();
+/*I'll be cleaning this code up. There's definitely some redundancy in calling a new Date() object, for example*/
 
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+//create document ready function
+$(document).ready(function(){
 
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//create function to display the time
+	function displayTime(){
+//create variable currentTime and have the Date() object store computer's time
+		var currentTime = new Date();
+//create variables for hours, minutes, and seconds		
+		var hours = currentTime.getHours();
+		var minutes = currentTime.getMinutes();
+		var seconds = currentTime.getSeconds();	
+		var meridiem = " AM";
 
-var dateTime = date+' '+time;
-    
-    document.getElementById("time").innerHTML = dateTime;</script>
+		if(hours>11){
+			hours = hours - 12;
+			meridiem = " PM";
+		}
+		if(hours === 0){
+			hours = 12;
+		}
+		if (hours<10){
+			hours = "0" + hours;
+		}
+		if (minutes<10){
+			minutes = "0" + minutes;
+		}
+		if (seconds<10){
+			seconds = "0" + seconds;
+		}
+		$("#clock").text(hours + ":" + minutes + ":" + seconds +  meridiem);
+		//set variable to change clockDiv in HTML
+		//var clockDiv = document.getElementById('clock');
+
+		//innerText to set text inside an HTML element
+		//clockDiv.innerText = hours + ":" + minutes + ":" + seconds + meridiem;
+	}
+	function displayDay(){
+		var currentDay = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		var day = days[currentDay.getDay()];
+		$("#day").text(day);
+	}	
+	function displayDate(){
+		var currentDate = new Date();
+		var year = currentDate.getFullYear();
+		var date = currentDate.getDate();
+		var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+		var month = months[currentDate.getMonth()];
+		if (date<10){
+			date = "0" + date;
+		}
+
+		$("#date").text(month +" "+ date +" "+ year);
+	}
+	displayTime();
+	setInterval(displayTime, 1000);
+	displayDay();
+	displayDate();
+
+});</script>
   </body>
 </html>
