@@ -15,10 +15,30 @@
       <ul>
         <li><a href="/resume.pdf" target="_blank">My Resume</a></li>
       </ul>
-      <div class="Time">
-        <span class="js-time" style="width: 151px;"></span>
-        <span class="js-day"></span>
-      </div>
+      <div id="time"></div>
     </main>
+    <script>
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
+      startTime();</script>
   </body>
 </html>
