@@ -36,7 +36,7 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   ms = checkTime(ms);
-  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s + ":" + ms;
   t = setTimeout(function() {
     startTime()
   }, 500);
