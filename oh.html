@@ -22,4 +22,13 @@
         <iframe id="typeform-full" width="100%" height="100%" frameborder="0" allow="camera; microphone; autoplay; encrypted-media;" src="https://form.typeform.com/to/Kp05G2bM"></iframe>
         <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
     </body>
+    <script>
+  window.addEventListener("DOMContentLoaded", function() {
+    var el = document.getElementById("my-embedded-typeform");
+    window.typeformEmbed.makeWidget(el, "/ohc.html", {
+    onSubmit: function() {
+      alert("submited!");
+    }
+  });
+});</script>
 </html>
