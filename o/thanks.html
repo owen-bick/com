@@ -193,14 +193,12 @@ p.error {
 						</div>
 						<div id="header_welcomePage" class="jfWelcome-header form-header" data-component="header" style="opacity:1">Thanks for signing in! 🤩</div>
 						<div id="subHeader_welcomePage" class="jfWelcome-description form-subHeader">You are now free to look around the open house 😎</div>
+						<div class="jfWelcome-sectionInfo"><span class="jfWelcome-sectionInfo-questionCount">3</span><span class="jfWelcome-sectionInfo-text">Please click the button below to exit or wait <span id="countdown">10</span> seconds.</span></div>
 						<div class="jfWelcome-buttonWrapper">
 							<button class="jfWelcome-button" id="jfCard-welcome-start" style="display:inline">Exit</button>
 						</div>
 					</div>
 				</div>
-					<h3>
-  Redirecting to duckdev.com after <span id="countdown">10</span> seconds
-</h3>
 				</div>
 			</div>
 			<script type="text/javascript">
@@ -212,7 +210,7 @@ p.error {
         seconds = seconds - 1;
         if (seconds < 0) {
             // Chnage your redirection link here
-            window.location = "#";
+            window.location = "https://owenbick.com/o";
         } else {
             // Update remaining seconds
             document.getElementById("countdown").innerHTML = seconds;
