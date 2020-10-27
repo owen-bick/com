@@ -77,7 +77,7 @@
 	}, window.addEventListener ? window.addEventListener("message", handleIFrameMessage, !1) : window.attachEvent && window.attachEvent("onmessage", handleIFrameMessage);
 	</script>
 	<script>
-	$("iframe").load(function() {
+	$(iframe).on('load', function(){
 		$("iframe").contents().find(".formFooter").css("display", "none !important")
 	});
 	</script>
