@@ -84,5 +84,7 @@
       } else if (window.attachEvent) {
         window.attachEvent("onmessage", handleIFrameMessage);
       }
-        $("iframe").contents().find(".formFooter").addClass("none");
-      </script></body></html>
+      </script>
+    <script>$('iframe').load(function() {
+  $("iframe").contents().find(".formFooter").css('display' , 'none !important');	
+        });</script></body></html>
