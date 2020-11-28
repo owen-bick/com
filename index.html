@@ -67,10 +67,45 @@
       color: #fff;
       text-decoration: underline;
     }
+
     a.producthunt {
       color: #da552f;
     }
-    
+
+    a.github {
+      color: #4078c0;
+    }
+
+    a.linkedin {
+      color: #0077b5;
+    }
+
+    a.twitter {
+      color: #1da1f2;
+    }
+
+    a.dribbble {
+      color: #ea4c89;
+    }
+
+    a.instagram {
+      color: #405de6;
+    }
+
+    a.medium {
+      color: #00ab6c;
+    }
+
+    a.external-link:after {
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-left: 0.1rem;
+      content: " ↗";
+      vertical-align: text-top;
+      opacity: 0.5;
+      position: absolute;
+    }
 
     ul {
       margin: 0;
@@ -164,13 +199,28 @@
   <main>
     <div class="container">
       <h1>Hey, I'm Owen Bick <span class="wave">👋</span></h1>
-      <h2>I'm a product manager, developer, designer, real estate professional, and micro investor based in Boston ☘️</h2>
-      <p>I am pretty active on <a href="//producthunt.com/@bick" class="producthunt" target="_blank">ProductHunt</a>, <a href="//github.com/owen-bick" class="github" target="_blank">GitHub</a>, and <a href="//linkedin.com/in/bick" class="linkedin" target="_blank">LinkedIn</a>.</p>
-      <p>I also use <a href="//twitter.com/owenbick" class="twitter" target="_blank">Twitter</a>, <a href="//dribbble.com/bick" class="dribbble" target="_blank">Dribbble</a>, <a href="//instagram.com/owenbick" class="instagram" target="_blank">Instagram</a>, and <a href="//medium.com/bick" class="medium" target="_blank">Medium</a>.</p>
+      <h2>I'm a product manager, developer, designer, real estate professional, and micro investor based in Boston ☘️
+      </h2>
+      <p>I am pretty active on <a href="//producthunt.com/@bick" class="producthunt" target="_blank">ProductHunt</a>, <a
+          href="//github.com/owen-bick" class="github" target="_blank">GitHub</a>, and <a href="//linkedin.com/in/bick"
+          class="linkedin" target="_blank">LinkedIn</a>.</p>
+      <p>I also use <a href="//twitter.com/owenbick" class="twitter" target="_blank">Twitter</a>, <a
+          href="//dribbble.com/bick" class="dribbble" target="_blank">Dribbble</a>, <a href="//instagram.com/owenbick"
+          class="instagram" target="_blank">Instagram</a>, and <a href="//medium.com/bick" class="medium"
+          target="_blank">Medium</a>.</p>
       <p>If you need to set up a meeting with me, you can do so via my <a href="//calendly.com/bick">Calendly</a>.</p>
-      <p><a href="mailto:&#111;&#119;&#101;&#110;&#098;&#105;&#099;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Contact Me</a></p>
+      <p><a
+          href="mailto:&#111;&#119;&#101;&#110;&#098;&#105;&#099;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Contact
+          Me</a></p>
     </div>
   </main>
+  <script>
+    $("a").each(function () {
+      if (location.hostname === this.hostname || !this.hostname.length) {} else {
+        $(this).addClass("external-link");
+      }
+    });
+  </script>
 </body>
 
 </html>
