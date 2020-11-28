@@ -95,8 +95,12 @@
     a.medium {
       color: #00ab6c;
     }
+
     a.email {
       color: blue;
+    }
+    a.email:hover span {
+      text-decoration: none;
     }
 
     a.external:after {
@@ -112,38 +116,26 @@
       color: #fff;
     }
 
-    ul {
-      margin: 0;
-      margin-top: 40px;
-      padding: 0;
-      list-style: none
-    }
-
     main {
       margin: 80px 40px
     }
 
-    h1,
-    li {
+    h1 {
       font-weight: 500;
       line-height: 1.4;
       font-size: 32px;
       margin: 0
     }
 
-    li {
-      color: #333;
-      margin: 0 0 .5em
-    }
-
-    li a {
-      color: #777
-    }
-
-    h2,
-    p {
-      font-size: 2rem;
+    h2 {
+      font-size: 1.5rem;
       font-weight: 500;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: .5rem 0;
     }
 
     @media (max-width:600px) {
@@ -217,11 +209,13 @@
           target="_blank">Medium</a>.</p>
       <p>If you need to set up a meeting with me, you can do so via my <a href="//calendly.com/bick">Calendly</a>.</p>
       <p><a
-          href="mailto:&#111;&#119;&#101;&#110;&#098;&#105;&#099;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" class="email">✉️ Contact
-          Me</a></p>
+          href="mailto:&#111;&#119;&#101;&#110;&#098;&#105;&#099;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+          class="email"><span class="emoji">✉️</span> Contact Me</a></p>
     </div>
   </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
   <script>
     $('a').filter(function () {
       return this.hostname && this.hostname !== location.hostname;
