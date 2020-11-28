@@ -96,7 +96,7 @@
       color: #00ab6c;
     }
 
-    a.external-link:after {
+    a[href^="//"].external-link:after {
       font-size: 0.7rem;
       font-weight: 500;
       line-height: 1;
@@ -214,14 +214,6 @@
           Me</a></p>
     </div>
   </main>
-  <script>
-    var links = document.getElementsByTagName("a"); //use div object here instead of document
-    for (var i = 0; i < links.length; i++) {
-      if (links[i].href.substring(0, 5) == '//') {
-        links[i].setAttribute('className', 'abc');
-      }
-    }
-  </script>
 </body>
 
 </html>
