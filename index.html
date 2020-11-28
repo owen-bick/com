@@ -215,11 +215,9 @@
     </div>
   </main>
   <script>
-    $("a").each(function () {
-      if (location.hostname === this.hostname || !this.hostname.length) {} else {
-        $(this).addClass("external-link");
-      }
-    });
+    $('a').filter(function () {
+      return this.hostname && this.hostname !== location.hostname;
+    }).addClass("external");
   </script>
 </body>
 
