@@ -37,11 +37,11 @@
 
     body,
     html {
-      background-color: #000;
+      background-color: #111;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
       font-style: normal;
-      font-weight: 100;
+      font-weight: 500;
       font-size: inherit;
       padding: 0;
       margin: 0
@@ -59,17 +59,18 @@
 
     a {
       color: #fff;
-      transition: all .4s cubic-bezier(0, 1.115, .415, .975)
-    }
-
-    a,
-    a:hover {
-      text-decoration: none
+      transition: all .4s cubic-bezier(0, 1.115, .415, .975);
+      text-decoration: none;
     }
 
     a:hover {
-      color: #fff
+      color: #fff;
+      text-decoration: underline;
     }
+    a.producthunt {
+      color: #da552f;
+    }
+    
 
     ul {
       margin: 0;
@@ -97,6 +98,10 @@
 
     li a {
       color: #777
+    }
+
+    p {
+      f
     }
 
     @media (max-width:600px) {
@@ -160,14 +165,10 @@
     <div class="container">
       <h1>Hey, I'm Owen Bick <span class="wave">👋</span></h1>
       <h2>I'm a product manager, developer, designer, real estate professional, and micro investor based in Boston ☘️</h2>
-      <p>I am pretty active on <a href="//producthunt.com/bick">ProductHunt</a>, <a href="//github.com/owen-bick">GitHub</a>, and <a href="//linkedin.com/in/bick">LinkedIn</a>.</p>
-      <p>I also use <a href="//twitter.com/owenbick">Twitter</a>, <a href="//dribbble.com/bick">Dribbble</a>, and <a href="//instagram.com/owenbick">Instagram</a>.</p>
+      <p>I am pretty active on <a href="//producthunt.com/@bick" class="producthunt" target="_blank">ProductHunt</a>, <a href="//github.com/owen-bick" class="github" target="_blank">GitHub</a>, and <a href="//linkedin.com/in/bick" class="linkedin" target="_blank">LinkedIn</a>.</p>
+      <p>I also use <a href="//twitter.com/owenbick" class="twitter" target="_blank">Twitter</a>, <a href="//dribbble.com/bick" class="dribbble" target="_blank">Dribbble</a>, <a href="//instagram.com/owenbick" class="instagram" target="_blank">Instagram</a>, and <a href="//medium.com/bick" class="medium" target="_blank">Medium</a>.</p>
       <p>If you need to set up a meeting with me, you can do so via my <a href="//calendly.com/bick">Calendly</a>.</p>
       <p><a href="mailto:&#111;&#119;&#101;&#110;&#098;&#105;&#099;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Contact Me</a></p>
-      <ul>
-        <li><a href="/resume.pdf" target="_blank">My Resume</a></li>
-        <li><a href="//calendly.com/bick" target="_blank">Schedule A Meeting</a></li>
-      </ul>
     </div>
   </main>
 </body>
