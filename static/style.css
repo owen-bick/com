@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;700&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	background: #111;
+	color: #fff;
+	font-family: Inter, sans-serif;
+	font-style: normal;
+	font-size: inherit;
+	padding: 0;
+	margin: 0;
+}
+.container {
+	max-width: 90vw;
+	width: 100%;
+	padding-right: 1.5rem;
+	padding-left: 1.5em;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	z-index: 9999;
+}
+
+a {
+	color: #fff;
+	transition: all 0.4s cubic-bezier(0, 1.115, 0.415, 0.975);
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a.producthunt {
+	color: #da552f;
+}
+
+a.github {
+	color: #4078c0;
+}
+
+a.linkedin {
+	color: #0077b5;
+}
+
+a.twitter {
+	color: #1da1f2;
+}
+
+a.dribbble {
+	color: #ea4c89;
+}
+
+a.instagram {
+	color: #405de6;
+}
+
+a.medium {
+	color: #00ab6c;
+}
+
+a.calendly {
+	color: #00a3fa;
+}
+
+a.email {
+	color: blue;
+}
+
+a.email:hover span {
+	text-decoration: none;
+}
+
+a.external:after {
+	display: inline-block;
+	font-size: 0.9rem;
+	font-weight: 500;
+	line-height: 1;
+	margin-left: 0.25rem;
+	content: " ↗";
+	vertical-align: text-top;
+	opacity: 0.5;
+	position: relative;
+	color: #fff;
+}
+
+.ph-background {
+	background: url("/static/producthunt.png");
+	background-size: cover;
+}
+.gh-background {
+	background: url("/static/github.png");
+	background-size: cover;
+}
+.li-background {
+	background: url("/static/linkedin.png");
+	background-size: cover;
+}
+.t-background {
+	background: url("/static/twitter.png");
+	background-size: cover;
+}
+.d-background {
+	background: url("/static/dribbble.png");
+	background-size: cover;
+}
+.ig-background {
+	background: url("/static/instagram.png");
+	background-size: cover;
+}
+.m-background {
+	background: url("/static/medium.png");
+	background-size: cover;
+}
+.c-background {
+	background: url("/static/calendly.png");
+	background-size: cover;
+}
+.e-background {
+	background: url("/static/email.jpg");
+	background-size: cover;
+}
+
+main {
+	margin: 2rem;
+}
+
+h1 {
+	font-family: caveat, cursive;
+	font-size: 2rem;
+	margin: 0;
+	animation: slide;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-delay: 3s;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+p {
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin: 0.5rem 0;
+	animation: slide;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-delay: 3.5s;
+}
+
+@media (max-width: 600px) {
+	h1,
+	li {
+		font-size: 22px;
+	}
+
+	main {
+		margin: 55px 18px;
+	}
+}
+
+.owenbick {
+	max-width: 5rem;
+	max-height: 5rem;
+	margin-bottom: 1rem;
+}
+
+.owenbick img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.wave {
+	animation-name: wave;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	transform-origin: 70% 70%;
+	display: inline-block;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10% {
+		transform: rotate(14deg);
+	}
+
+	20% {
+		transform: rotate(-8deg);
+	}
+
+	30% {
+		transform: rotate(14deg);
+	}
+
+	40% {
+		transform: rotate(-4deg);
+	}
+
+	50% {
+		transform: rotate(10deg);
+	}
+
+	60% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+.job-title {
+	animation: job-title;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.job-title:nth-child(2) {
+	animation-delay: 0.5s;
+}
+.job-title:nth-child(3) {
+	animation-delay: 1s;
+}
+.job-title:nth-child(4) {
+	animation-delay: 1.5s;
+}
+.job-title:nth-child(5) {
+	animation-delay: 2s;
+}
+.job-title:nth-child(6) {
+	animation-delay: 2.5s;
+}
+.boston {
+	animation: boston;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-delay: 2.5s;
+}
+@keyframes job-title {
+	0% {
+		transform: translate(0, 2em);
+		opacity: 0;
+		text-shadow: 0 0 0 #888;
+	}
+	50% {
+		text-shadow: 0 0 0.5em #888;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+		text-shadow: none;
+	}
+}
+@keyframes slide {
+	0% {
+		transform: translate(0, 2em);
+		opacity: 0;
+		text-shadow: 0 0 0 #888;
+	}
+	50% {
+		text-shadow: 0 0 0.5em #888;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+		text-shadow: none;
+	}
+}
+@keyframes fade {
+	0% {
+		display: none;
+	}
+	100% {
+		display: block;
+	}
+}
+@keyframes boston {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		color: #007a33;
+		opacity: 1;
+	}
+}
