@@ -91,6 +91,7 @@ a.email:hover span {
 
 a.external:after,
 .email:after {
+	font-family: Inter !important;
 	display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 500;
