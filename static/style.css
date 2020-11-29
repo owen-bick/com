@@ -16,7 +16,7 @@ body {
 }
 main {
 	border-style: solid;
-	border-width: 10px;
+	border-width: .5rem;
 	border-image-source: linear-gradient(159deg, #1f0094, #8e62ff 18%, #f2aa72 39%, #ed693c 77%, #c96dd8);
 	border-image-slice: 1;
 	z-index: 9997;
@@ -137,7 +137,7 @@ c {
 	padding-right: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
 	h2 {
 		font-size: 2.5rem;
 	}
