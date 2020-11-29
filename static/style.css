@@ -92,6 +92,7 @@ a.external:after {
 .ph-background {
 	background: url("/static/producthunt.png");
 	background-size: cover;
+	transition: 0.2s;
 }
 .gh-background {
 	background: url("/static/github.png");
