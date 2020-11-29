@@ -91,13 +91,12 @@ a.email:hover span {
 
 a.external:after,
 .email:after {
-	font-family: Inter !important;
 	display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 500;
 	line-height: 1;
 	margin-left: 0.25rem;
-	content: " ↗";
+	content: " \2197";
 	vertical-align: text-top;
 	opacity: 0.5;
 	position: relative;
