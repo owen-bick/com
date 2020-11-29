@@ -134,7 +134,7 @@ p {
 	animation-delay: 6s;
 }
 c {
-	padding-right: 1rem;
+	padding-right: .5rem;
 }
 
 @media (max-width: 48rem) {
