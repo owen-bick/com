@@ -170,6 +170,10 @@ c {
 	}
 	.loading {
 		font-size: 4rem !important;
+		margin-top: -10%;
+	}
+	.no-animations {
+		bottom: 5rem !important;
 	}
 }
 
