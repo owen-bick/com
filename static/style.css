@@ -31,7 +31,7 @@ main {
 	max-width: 90vw;
 	width: 100%;
 	padding-right: 1.5rem;
-	padding-left: 1.5em;
+	padding-left: 1.5rem;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -207,12 +207,12 @@ c {
 }
 @keyframes job-title {
 	0% {
-		transform: translate(0, 2em);
+		transform: translate(0, 2rem);
 		opacity: 0;
 		text-shadow: 0 0 0 #888;
 	}
 	50% {
-		text-shadow: 0 0 0.5em #888;
+		text-shadow: 0 0 0.5rem #888;
 	}
 	100% {
 		transform: translate(0, 0);
@@ -222,12 +222,12 @@ c {
 }
 @keyframes slide {
 	0% {
-		transform: translate(0, 2em);
+		transform: translate(0, 2rem);
 		opacity: 0;
 		text-shadow: 0 0 0 #888;
 	}
 	50% {
-		text-shadow: 0 0 0.5em #888;
+		text-shadow: 0 0 0.5rem #888;
 	}
 	100% {
 		transform: translate(0, 0);
