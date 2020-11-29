@@ -88,12 +88,17 @@ a.external:after {
 	position: relative;
 	color: #fff;
 }
-
+.ph-background {
+	display: inline-block; 
+	position: relative;
+	opacity: 1;
+}
 .ph-background:after {
 	content: "";
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	opacity: 0;
 	transition: opacity 5s ease-in-out;
 	background: url("/static/producthunt.png");
 	background-size: cover;
