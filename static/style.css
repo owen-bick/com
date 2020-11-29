@@ -4,8 +4,7 @@
 	box-sizing: border-box;
 }
 
-body,
-html {
+body {
 	background: #111;
 	color: #fff;
 	font-family: Inter, sans-serif;
@@ -13,6 +12,20 @@ html {
 	font-size: inherit;
 	padding: 0;
 	margin: 0;
+	min-height: 100vh;
+}
+main {
+	border-style: solid;
+	border-width: 10px;
+	border-image-source: linear-gradient(159deg, #1f0094, #8e62ff 18%, #f2aa72 39%, #ed693c 77%, #c96dd8);
+	border-image-slice: 1;
+	z-index: 9997;
+	position: relative;
+	animation: content-animation;
+	animation-delay: 2s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	min-height: 100vh;
 }
 .container {
 	max-width: 90vw;
@@ -69,14 +82,15 @@ a.calendly {
 }
 
 a.email {
-	color: blue;
+	color: orange;
 }
 
 a.email:hover span {
 	text-decoration: none;
 }
 
-a.external:after {
+a.external:after,
+.email:after {
 	display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 500;
@@ -88,172 +102,100 @@ a.external:after {
 	position: relative;
 	color: #fff;
 }
-.ph-background {
-	display: inline-block; 
-	position: relative;
-	opacity: 1;
-}
-.ph-background:after {
-	content: "";
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: opacity 5s ease-in-out;
-	background: url("/static/producthunt.png");
-	background-size: cover;
-}
-.gh-background {
-	background: url("/static/github.png");
-	background-size: cover;
-}
-.li-background {
-	background: url("/static/linkedin.png");
-	background-size: cover;
-}
-.t-background {
-	background: url("/static/twitter.png");
-	background-size: cover;
-}
-.d-background {
-	background: url("/static/dribbble.png");
-	background-size: cover;
-}
-.ig-background {
-	background: url("/static/instagram.png");
-	background-size: cover;
-}
-.m-background {
-	background: url("/static/medium.png");
-	background-size: cover;
-}
-.c-background {
-	background: url("/static/calendly.png");
-	background-size: cover;
-}
-.e-background {
-	background: url("/static/email.jpg");
-	background-size: cover;
-}
-
-main {
-	margin: 2rem;
-}
 
 h1 {
 	font-family: caveat, cursive;
 	font-size: 2rem;
 	margin: 0;
+	padding: 2rem 0 0 0;
 	animation: slide;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	animation-delay: 3s;
+	animation-delay: 5.5s;
 }
 
 h2 {
 	font-size: 4rem;
 	font-weight: 500;
+	color: #999;
 }
 
 p {
 	font-size: 1.5rem;
 	font-weight: 400;
-	margin: 0.5rem 0;
+	margin: 1.5rem 0;
 	animation: slide;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	animation-delay: 3.5s;
+	animation-delay: 6s;
+}
+c {
+	padding-right: 1rem;
 }
 
-@media (max-width: 600px) {
-	h1,
-	li {
-		font-size: 22px;
+@media (max-width: 768px) {
+	h2 {
+		font-size: 2.5rem;
 	}
-
-	main {
-		margin: 55px 18px;
+	.container {
+		padding-bottom: 5rem;
 	}
-}
-
-.owenbick {
-	max-width: 5rem;
-	max-height: 5rem;
-	margin-bottom: 1rem;
-}
-
-.owenbick img {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-}
-
-.wave {
-	animation-name: wave;
-	animation-duration: 2.5s;
-	animation-iteration-count: infinite;
-	transform-origin: 70% 70%;
-	display: inline-block;
-}
-
-@keyframes wave {
-	0% {
-		transform: rotate(0deg);
+	.email {
+		display: block;
 	}
-
-	10% {
-		transform: rotate(14deg);
+	p {
+		margin: 0.5rem 0;
 	}
-
-	20% {
-		transform: rotate(-8deg);
+	p a {
+		display: block;
+		margin: 0.75rem 0;
 	}
-
-	30% {
-		transform: rotate(14deg);
+	p a:first-child {
+		margin-top: 1rem;
 	}
-
-	40% {
-		transform: rotate(-4deg);
+	p a:last-child {
+		margin-bottom: 2rem;
 	}
-
-	50% {
-		transform: rotate(10deg);
+	c,
+	d {
+		display: none;
 	}
-
-	60% {
-		transform: rotate(0deg);
+	.loading-wrapper {
+		position: fixed !important;
+		height: 100vh !important;
 	}
-
-	100% {
-		transform: rotate(0deg);
+	.loading {
+		font-size: 4rem !important;
 	}
 }
+
 .job-title {
 	animation: job-title;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
+	animation-delay: 2.5s;
+	color: #fff;
 }
 .job-title:nth-child(2) {
-	animation-delay: 0.5s;
+	animation-delay: 3s;
 }
 .job-title:nth-child(3) {
-	animation-delay: 1s;
+	animation-delay: 3.5s;
 }
 .job-title:nth-child(4) {
-	animation-delay: 1.5s;
+	animation-delay: 4s;
 }
 .job-title:nth-child(5) {
-	animation-delay: 2s;
+	animation-delay: 4.5s;
 }
 .job-title:nth-child(6) {
-	animation-delay: 2.5s;
+	animation-delay: 5s;
 }
 .boston {
 	animation: boston;
@@ -261,7 +203,7 @@ p {
 	animation-duration: 0.5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	animation-delay: 2.5s;
+	animation-delay: 5s;
 }
 @keyframes job-title {
 	0% {
@@ -312,4 +254,61 @@ p {
 		color: #007a33;
 		opacity: 1;
 	}
+}
+.loading-wrapper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #111;
+	z-index: 9998;
+}
+.loading {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10rem;
+	text-align: center;
+	display: block;
+	animation: loading 1s infinite;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.no-animations {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #999;
+}
+@keyframes loading {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes content-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.animations-disabled main,
+.animations-disabled h1,
+.animations-disabled h2,
+.animations-disabled p,
+.animations-disabled .job-title,
+.animations-disabled .boston,
+.animations-disabled .loading {
+	animation: none !important;
+}
+.animations-disabled .loading {
+	display: none !important;
 }
