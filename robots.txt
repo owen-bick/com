@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /o/
+Sitemap: https://owenbick.com/sitemap.xml
