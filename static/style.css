@@ -204,12 +204,7 @@ c {
 	animation-delay: 5s;
 }
 .boston {
-	animation: boston;
-	-webkit-animation-duration: 0.5s;
-	animation-duration: 0.5s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	animation-delay: 5s;
+	animation: boston 0.5s both 5s, boston-green 2s both 7s;
 }
 @keyframes job-title {
 	0% {
@@ -253,12 +248,16 @@ c {
 	0% {
 		opacity: 0;
 	}
-	50% {
+	100% {
 		opacity: 1;
 	}
+}
+@keyframes boston-green {
+	0% {
+		color: #fff;
+	}
 	100% {
-		color: #007a33;
-		opacity: 1;
+		color: #52D415;
 	}
 }
 .loading-wrapper {
