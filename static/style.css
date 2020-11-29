@@ -173,7 +173,8 @@ c {
 		margin-top: -10%;
 	}
 	.no-animations {
-		bottom: 5rem !important;
+		bottom: 30% !important;
+		transform: translateY(-30%);
 		text-align: center;
 	}
 }
