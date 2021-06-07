@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box
+}
+
+body,
+html {
+    background-color: #E2DDD4;
+    color: #071f30;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-style: normal;
+    font-weight: 400;
+    font-size: inherit;
+    padding: 0;
+    margin: 0
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #071f30;
+    transition: all .4s cubic-bezier(0, 1.115, .415, .975)
+}
+
+a,
+a:hover {
+    text-decoration: none
+}
+
+a:hover {
+    color: #071f30
+}
+
+ul {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    list-style: none
+}
+
+main {
+    margin: 3rem 4rem
+}
+
+h1,
+li {
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 32px;
+    margin: 0
+}
+
+li {
+    color: #333;
+    margin: 0 0 .5em
+}
+
+li a {
+    color: #777
+}
+
+@media (max-width:600px) {
+
+    h1,
+    li {
+        font-size: 22px
+    }
+
+    main {
+        margin: 55px 18px
+    }
+}
+
+a:link[href^="//"]:after {
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-left: .25rem;
+    content: '↗';
+    vertical-align: text-top;
+    opacity: .5
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    .bick {
+        display: block;
+        max-height: 7rem;
+        max-width: 7rem;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(2px);
+        padding: .75rem;
+        border-radius: 50rem;
+        margin-right: 2rem;
+    }
+
+    .titles {
+        h1 {
+            display: block;
+        }
+    }
+}
+
+.spacer {
+    display: block;
+    width: 3rem;
+    height: .25rem;
+    background: $orange;
+    border-radius: 5rem;
+    margin: 5rem 0;
+}
+
+h1 {
+    display: block;
+}
+
+.resume {
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    .resume__job {
+        display: flex;
+        margin-bottom: 2rem;
+
+        .resume__job__logo {
+            min-width: 5rem;
+            min-height: 5rem;
+            max-height: 5rem;
+            margin-right: 1rem;
+
+            .resume__job__logo__img {
+                border-radius: .5rem;
+            }
+        }
+
+        .resume__job__info {
+            h3 {
+                margin: 0 0 .25rem;
+                font-weight: 500;
+            }
+
+            small {
+                font-weight: 400;
+                color: #777;
+            }
+
+            p {
+                font-weight: 4;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.contact {
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    input,
+    textarea {
+        display: block;
+        margin-top: .5rem;
+        border-radius: .25rem;
+        border: 2px solid rgba(119, 119, 119, .5);
+        padding: .75rem 1rem;
+        font-size: 1.25rem;
+        width: 100%;
+        outline: none;
+        transition: 0.2s;
+
+        &:hover {
+            border: 2px solid rgba(119, 119, 119, .8);
+        }
+
+        &:focus {
+            border: 2px solid $orange;
+        }
+    }
+
+    button {
+        background: $orange;
+        color: #fff;
+        font-size: 1.25rem;
+        padding: 1rem 1.25rem;
+        border: none;
+        border-radius: .5rem;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            background: #DB5D2E;
+        }
+    }
+}
+
+footer {
+    p {
+        line-height: 2;
+    }
+}
