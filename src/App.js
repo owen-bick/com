@@ -7,20 +7,24 @@ import lc from './images/loud-canvas.png';
 import stacktron from './images/stacktron.png';
 import './styles/scss/App.scss';
 
-class Application extends React.Component {
-  render() {
-    return (
-      <div className="application">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title data-react-helmet="true">My Title</title>
-          <link rel="canonical" href="http://mysite.com/example" data-react-helmet="true" />
-        </Helmet>
-            ...
-      </div>
-    );
-  }
-};
+export default function Meta() {
+  return (
+    <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title data-react-helmet="true">My Title</title>
+        <link
+          rel="canonical"
+          href="http://mysite.com/example"
+          data-react-helmet="true"
+        />
+      </Helmet>
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
+
 
 function App() {
   return (
@@ -92,3 +96,4 @@ function App() {
 }
 
 export default App;
+export Meta;
