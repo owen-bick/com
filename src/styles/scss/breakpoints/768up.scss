@@ -1,6 +1,25 @@
+main {
+    margin: 3rem 4rem
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    .bick {
+        margin: 0 2rem 0 0;
+    }
+
+    .titles {
+        text-align: left;
+    }
+}
+
 .resume {
     max-width: 40%;
 }
-.contact {
-    max-width: 40%;
+
+h1,
+li {
+    font-size: 2rem;
 }

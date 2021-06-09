@@ -8,6 +8,7 @@ html {
     color: #071f30;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
     font-weight: 400;
     font-size: inherit;
     padding: 0;
@@ -41,14 +42,14 @@ ul {
 }
 
 main {
-    margin: 3rem 4rem
+    margin: 2rem
 }
 
 h1,
 li {
     font-weight: 500;
     line-height: 1.4;
-    font-size: 32px;
+    font-size: 1.5rem;
     margin: 0
 }
 
@@ -59,18 +60,6 @@ li {
 
 li a {
     color: #777
-}
-
-@media (max-width:600px) {
-
-    h1,
-    li {
-        font-size: 22px
-    }
-
-    main {
-        margin: 55px 18px
-    }
 }
 
 a:link[href^="//"]:after {
@@ -84,8 +73,7 @@ a:link[href^="//"]:after {
 }
 
 .header {
-    display: flex;
-    align-items: center;
+    display: block;
 
     .bick {
         display: block;
@@ -96,10 +84,11 @@ a:link[href^="//"]:after {
         backdrop-filter: blur(2px);
         padding: .75rem;
         border-radius: 50rem;
-        margin-right: 2rem;
+        margin: 0 auto 1rem;
     }
 
     .titles {
+        text-align: center;
         h1 {
             display: block;
         }
@@ -132,6 +121,7 @@ h1 {
             min-width: 5rem;
             min-height: 5rem;
             max-height: 5rem;
+            max-width: 5rem;
             margin-right: 1rem;
 
             .resume__job__logo__img {
@@ -151,7 +141,7 @@ h1 {
             }
 
             p {
-                font-weight: 4;
+                font-weight: 400;
                 line-height: 1.5;
             }
         }
