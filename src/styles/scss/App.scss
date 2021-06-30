@@ -1,5 +1,6 @@
-// Variables
+// Partials
 @import './partials/variables.scss';
+@import './partials/reset.scss';
 @import './partials/animations.scss';
 
 // Breakpoints
@@ -10,4 +11,7 @@
 }
 
 // Modules
-@import './modules/forms.scss';
+@import './modules/grid.scss';
+
+// Pages
+@import './pages/home.scss';
